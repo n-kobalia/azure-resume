@@ -1,6 +1,6 @@
-import azure.functions as func # type: ignore
+import azure.functions as func
 import logging
-from azure.cosmos import CosmosClient # type: ignore
+from azure.cosmos import CosmosClient
 import os
 import json
 
