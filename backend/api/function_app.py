@@ -1,6 +1,6 @@
-import azure.functions as func
+import azure.functions as func # type: ignore
 import logging
-from azure.cosmos import CosmosClient
+from azure.cosmos import CosmosClient # type: ignore
 import os
 import json
 
@@ -38,11 +38,13 @@ def GetResumeCounter(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(
             json.dumps({"count": current_count}),
             mimetype="application/json",
-            status_code=200
+            status_code=200,
+            headers={"Access-Control-Allow-Origin": "*"}
         )
     except Exception as e:
         logging.error(f"Error: {str(e)}")
         return func.HttpResponse(
             json.dumps({"error": str(e)}),
-            status_code=500
+            status_code=500,
+            headers={"Access-Control-Allow-Origin": "*"}
         )
