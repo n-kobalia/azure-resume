@@ -11,22 +11,52 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZ_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Check frontend directory
+        run: |
+          if [ ! -d "./frontend" ]; then
+            echo "Frontend directory not found!"
+            exit 1
+          fi
+          echo "Frontend directory exists, proceeding with deployment..."
 
       - name: Upload to blob storage
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --account-name azresumeweb --auth-mode key -d '$web' -s frontend/
+            az storage blob upload-batch \
+              --account-name azresumeweb \
+              --auth-mode key \
+              -d '$web' \
+              -s ./frontend/ \
+              --overwrite true \
+              --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+
+      - name: Verify blob storage upload
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            echo "Verifying uploaded files..."
+            az storage blob list \
+              --account-name azresumeweb \
+              --container-name '$web' \
+              --output table
+
       - name: Purge CDN endpoint
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "azureresume" --name "nkresume.azureedge.net" --resource-group "azureresume-rg"
+            echo "Purging CDN endpoint..."
+            az cdn endpoint purge \
+              --content-paths "/*" \
+              --profile-name "azureresume" \
+              --name "nkresume.azureedge.net" \
+              --resource-group "azureresume-rg"
 
-      # Azure logout
       - name: logout
         run: |
           az logout
