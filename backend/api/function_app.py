@@ -21,7 +21,7 @@ def GetResumeCounter(req: func.HttpRequest) -> func.HttpResponse:
         database = client.get_database_client(os.environ["COSMOS_DB_DATABASE"])
         container = database.get_container_client(os.environ["COSMOS_DB_CONTAINER"])
 
-        # Query for counter document with id 'visitor'
+        # Query for counter document
         query = "SELECT * FROM c WHERE c.id = 'visitor'"
         items = list(container.query_items(query=query, enable_cross_partition_query=True))
         
