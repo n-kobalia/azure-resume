@@ -52,7 +52,6 @@ jobs:
             echo "Purging CDN endpoint..."
             az cdn endpoint purge \
               --content-paths "/frontend/index.html" \
-              -- no-wait {0, 1, f, false, n, no, t, true, y, yes} \
               --profile-name "azureresume" \
               --name "nkresume.azureedge.net" \
               --resource-group "azureresume-rg"
