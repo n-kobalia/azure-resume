@@ -30,7 +30,7 @@ jobs:
           inlineScript: |
             az storage blob upload-batch \
               --account-name azresumeweb \
-              --auth-mode login \
+              --auth-mode key \
               --destination '$web' \
               --source ./frontend \
               --overwrite \
