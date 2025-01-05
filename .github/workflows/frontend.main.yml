@@ -33,8 +33,7 @@ jobs:
               --auth-mode login \
               --destination '$web' \
               --source ./frontend \
-              --overwrite true \
-              --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+              --overwrite \
 
       - name: Verify blob storage upload
         uses: azure/CLI@v1
