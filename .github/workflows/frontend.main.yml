@@ -30,9 +30,9 @@ jobs:
           inlineScript: |
             az storage blob upload-batch \
               --account-name azresumeweb \
-              --auth-mode key \
+              --auth-mode login \
               --destination '$web' \
-              --source ./frontend \
+              --source frontend \
               --overwrite \
 
       - name: Verify blob storage upload
