@@ -51,7 +51,7 @@ jobs:
           inlineScript: |
             echo "Purging CDN endpoint..."
             az cdn endpoint purge \
-              --content-paths "/frontend/index.html" \
+              --content-paths "/*" \
               --profile-name "azureresume" \
               --name "nkresume.azureedge.net" \
               --resource-group "azureresume-rg" \
