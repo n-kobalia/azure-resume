@@ -54,7 +54,8 @@ jobs:
               --content-paths "/frontend/index.html" \
               --profile-name "azureresume" \
               --name "nkresume.azureedge.net" \
-              --resource-group "azureresume-rg"
+              --resource-group "azureresume-rg" \
+              --endpoint-name "nkresume" \
 
       - name: logout
         run: |
