@@ -14,8 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        run: actions/checkout@v3
-        run: azure/login@v1
+        uses: actions/checkout@v3
+        uses: azure/login@v1
         with:
           client_id: ${{ secrets.AZURE_CLIENT_ID }}
           tenent_id: ${{ secrets.AZURE_TENANT_ID }}
