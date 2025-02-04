@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout GitHub Action"
-        uses: actions/checkout@v3
+        run: actions/checkout@v3
 
       - name: "Login via Azure CLI"
-        uses: azure/login@v1
+        run: azure/login@v1
         with:
           client_id: ${{ secrets.AZURE_CLIENT_ID }}
           tenent_id: ${{ secrets.AZURE_TENANT_ID }}
@@ -34,7 +34,7 @@ jobs:
           echo "Frontend directory exists, proceeding with deployment..."
 
       - name: Upload to blob storage
-        uses: azure/CLI@v1
+        run: azure/CLI@v1
         with:
           inlineScript: |
             az storage blob upload-batch \
@@ -45,7 +45,7 @@ jobs:
               --overwrite \
 
       - name: Verify blob storage upload
-        uses: azure/CLI@v1
+        run: azure/CLI@v1
         with:
           inlineScript: |
             echo "Verifying uploaded files..."
@@ -55,7 +55,7 @@ jobs:
               --output table
 
       - name: Purge CDN endpoint
-        uses: azure/CLI@v1
+        run: azure/CLI@v1
         with:
           inlineScript: |
             echo "Purging CDN endpoint..."
