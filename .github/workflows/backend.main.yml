@@ -1,8 +1,9 @@
 name: New frontend worflow
 on: 
-  branch: [main]
-    paths:
-      - "frontend/**"
+  push:
+    branches: [main]
+      paths:
+        - "frontend/**"
 
 permissions:
   id-token: write
