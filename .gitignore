@@ -24,4 +24,4 @@ Thumbs.db
 *.sln
 .venv/
 .deployment/
-./frontend/main.js
+/frontend/main.js
