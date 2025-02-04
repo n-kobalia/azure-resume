@@ -1,17 +1,18 @@
 name: Deploy_Frontend
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - "frontend/**"
+name: Run Azure Login with OIDC
+on:[push]
+  
+    # branches: [main]
+    # paths:
+    #   - "frontend/**"
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
