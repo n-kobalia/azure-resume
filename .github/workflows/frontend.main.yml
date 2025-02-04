@@ -1,14 +1,14 @@
 name: Deploy_Frontend
 
-# on:
-#   push:
-#     branches: [main]
-#     paths:
-#       - "frontend/**"
+on:
+  push:
+    branches: [main]
+    paths:
+      - "frontend/**"
 
-permissions:
-  id-token: write
-  contents: read
+# permissions:
+#   id-token: write
+#   contents: read
 
 jobs:
   build:
