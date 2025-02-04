@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "frontend/**"
+      # - "frontend/**"
 
-# permissions:
-#   id-token: write
-#   contents: read
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   build:
