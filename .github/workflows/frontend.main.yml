@@ -1,10 +1,10 @@
 name: Deploy_Frontend
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - "frontend/**"
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - "frontend/**"
 
 permissions:
   id-token: write
@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
+
       - name: Azure login
         uses: azure/login@v1
         with:
