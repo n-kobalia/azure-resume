@@ -17,7 +17,8 @@ jobs:
 
       - name: Replace API Key Placeholder
         run: |
-          sed -i "s/API_KEY_PLACEHOLDER/${{ secrets.AZ_FUNC_API }}/g" ./frontend/main.js
+          API_KEY_ESCAPED=$(printf '%s\n' "${{ secrets.AZ_FUNC_API }}" | sed -e 's/[\/&]/\\&/g')
+          sed -i "s/API_KEY_PLACEHOLDER/${API_KEY_ESCAPED}/g" ./frontend/main.js
 
       - name: Azure CLI Login
         uses: azure/login@v2
