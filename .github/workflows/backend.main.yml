@@ -20,7 +20,9 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
   
     - name: Upload to blob storage
-      uses: azure/CLI@v1
+      uses: azure/login@v2
+      run: pwd
       with:
+        azcliversion: 2.67.0
         inlineScript: |
-            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s frontend --overwrite
+            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s ./frontend --overwrite
