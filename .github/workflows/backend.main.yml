@@ -23,6 +23,6 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
+            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s ./frontend --overwrite
             ls -la
             pwd
-            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s frontend --overwrite
