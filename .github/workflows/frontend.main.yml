@@ -15,6 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Replace API Key Placeholder
+        run: |
+          sed -i "s/API_KEY_PLACEHOLDER/${{ secrets.API_KEY }}/g" main.js
+
       - name: Azure CLI Login
         uses: azure/login@v2
         with:
