@@ -1,20 +1,28 @@
-name: CI with OpenID Connect
+name: Run Azure CLI Login with OpenID Connect
 
 on:
     push:
         branches: [ main ]
 
 permissions:
-      id-token: write
-      contents: read
-
-jobs:
+  id-token: write
+  contents: read
+      
+jobs: 
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: azure/login@v1
+    - name: Azure CLI Login
+      uses: azure/login@v2
       with:
-      client-id: ${{ secrets.AZURE_CLIENT_ID }}
-      tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-      subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  
+    - name: Azure CLI script
+      uses: azure/cli@v2
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az account show
+          # You can write your Azure CLI inline scripts here.
