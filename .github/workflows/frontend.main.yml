@@ -24,4 +24,4 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode login -d '$web' -s . --overwrite
+            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode login -d '$web' -s frontend --overwrite
