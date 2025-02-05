@@ -22,6 +22,5 @@ jobs:
     - name: Upload to blob storage
       uses: azure/login@v2
       with:
-        azcliversion: 2.67.0
         inlineScript: |
             az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s ./frontend --overwrite
