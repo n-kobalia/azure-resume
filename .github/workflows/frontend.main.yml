@@ -28,7 +28,7 @@ jobs:
 
       - name: Check frontend directory
         run: |
-          if [ ! -d "./frontend" ]; then
+          if [ ! -d "frontend" ]; then
             echo "Frontend directory not found!"
             exit 1
           fi
