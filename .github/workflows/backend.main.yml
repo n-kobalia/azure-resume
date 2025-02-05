@@ -25,4 +25,4 @@ jobs:
         inlineScript: |
             pwd
             ls -la
-            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s frontend --overwrite
+            az storage blob upload-batch --account-name nkazureresumestorageweb --auth-mode key -d '$web' -s . --overwrite
