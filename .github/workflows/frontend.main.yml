@@ -31,5 +31,5 @@ jobs:
               --auth-mode login \
               --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
               --destination '$web' \
-              --source frontend \
+              --source ./frontend \
               --overwrite
