@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded",(event) =>{
 })
 
 const functionApiURL = 'API_KEY_PLACEHOLDER';
-// const localfunctionApi = ('http://localhost:7071/api/GetResumeCounter');
 
 const getVisitCount = () =>{
     let count =30;
