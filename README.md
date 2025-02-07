@@ -38,7 +38,7 @@ You can check out the live version of my resume here: [Live](https://nkobalia.si
 
 ## Credits
 
-Inspired by the A Cloud Guru. Special thanks to the cloud madebygps!
+Inspired by the A Cloud Guru. Special thanks to the madebygps!
 
 ## Contact
 
