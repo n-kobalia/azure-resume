@@ -38,4 +38,4 @@ Inspired by the A Cloud Guru. Special thanks to the cloud madebygps!
 
 📩 Contact
 
-Feel free to connect with me on LinkedIn, or reach out via email if you have any questions!
+Feel free to connect with me on [LinkedIn] (https://www.linkedin.com/in/nodari-kobalia/), or reach out via email: qobalia8@gmail.com if you have any questions!
