@@ -14,15 +14,13 @@ Azure Storage Account – Hosts the static website.
 
 Cloudflare – Security, performance, and global accessibility.
 
-Azure Functions – Tracks visitors.
+Azure Functions (Python) – Tracks visitors.
 
 Azure Cosmos DB – Stores visitor count data.
 
 GitHub Actions – Automates the deployment process.
 
 HTML, CSS, JavaScript – Frontend technologies for the resume site.
-
-Python - Backend technologies.
 
 ## Features
 
