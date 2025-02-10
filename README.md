@@ -12,7 +12,7 @@ This project is part of the Azure Resume Challenge, an initiative to build a clo
 
 Azure Storage Account – Hosts the static website.
 
-Azure CDN (Custom Domain, WAF) – Improves performance and global accessibility.
+Cloudflare – Security, performance, and global accessibility.
 
 Azure Functions – Tracks visitors.
 
