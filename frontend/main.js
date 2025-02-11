@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded",(event) =>{
 })
 
 const functionApiURL = 'https://azresumeapi.azure-api.net/nk-azureresume-function-app';
-const subKey = '6fa71862aee84a9f94225cdc3cf98f1b';
+// const subKey = '6fa71862aee84a9f94225cdc3cf98f1b';
 
 const getVisitCount = () =>{
     let count =30;
