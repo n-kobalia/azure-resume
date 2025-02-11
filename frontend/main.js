@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded",(event) =>{
     getVisitCount();
 })
 
-const functionApiURL = 'api/function_app'; 
+const functionApiURL = '/api/function_app'; 
 
 const getVisitCount = () =>{
     let count =30;
