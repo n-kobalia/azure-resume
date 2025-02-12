@@ -4,7 +4,7 @@ from azure.cosmos import CosmosClient
 import os
 import json
 
-app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
 def get_cosmos_client():
     endpoint = os.environ["COSMOS_DB_ENDPOINT"]
