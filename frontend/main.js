@@ -5,9 +5,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 const functionApiURL = '/api/GetResumeCounter';
 const getVisitCount = () => {
     fetch(functionApiURL, {
-        headers: {
-            'x-functions-key': 'hJzrVFG5EHxOEdS5MMklr83fiOIChCd0DDkdxyftnzGtAzFuNKJT6w=='
-        }
     })
         .then(response => {
             if (!response.ok) {
