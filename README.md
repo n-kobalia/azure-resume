@@ -10,7 +10,7 @@ This project is part of the Azure Resume Challenge, an initiative to build a clo
 
 ## Tech Stack
 
-Azure Storage Account – Hosts the static website.
+Azure Static Web App – Hosts the static website.
 
 Cloudflare – Security, performance, and global accessibility.
 
