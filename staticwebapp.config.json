@@ -1,1 +1,15 @@
-{}
+{
+    "routes": [
+      {
+        "route": "/api/*",
+        "rewrite": "https://nk-azureresume-function-app.azurewebsites.net/api/GetResumeCounter?",
+        "allowedRoles": ["anonymous"]
+      }
+    ],
+    "responseOverrides": {
+      "400": {
+        "redirect": "/error.html",
+        "statusCode": 302
+      }
+    }
+  }
