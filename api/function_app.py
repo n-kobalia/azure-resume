@@ -38,11 +38,19 @@ def GetResumeCounter(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(
             json.dumps({"count": current_count}),
             mimetype="application/json",
-            status_code=200
+            status_code=200,
+            headers={
+                "Access-Control-Allow-Origin": "https://lemon-wave-06bcc1910.4.azurestaticapps.net",
+                "Access-Control-Allow-Methods": "GET"
+                }
         )
     except Exception as e:
         logging.error(f"Error: {str(e)}")
         return func.HttpResponse(
             json.dumps({"error": str(e)}),
-            status_code=500
+            status_code=500,
+            headers={
+                "Access-Control-Allow-Origin": "https://lemon-wave-06bcc1910.4.azurestaticapps.net",
+                "Access-Control-Allow-Methods": "GET"
+                }
         )
