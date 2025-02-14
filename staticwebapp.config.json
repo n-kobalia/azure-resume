@@ -1,8 +1,9 @@
 {
     "routes": [
       {
-        "route": "/api/*",
+        "route": "/api/GetResumeCounter",
         "rewrite": "https://nk-azureresume-function-app.azurewebsites.net/api/GetResumeCounter?",
+        "redirect": "https://nk-azureresume-function-app.azurewebsites.net/api/GetResumeCounter?",
         "allowedRoles": ["anonymous"]
       }
     ],
