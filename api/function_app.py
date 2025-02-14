@@ -38,13 +38,11 @@ def GetResumeCounter(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(
             json.dumps({"count": current_count}),
             mimetype="application/json",
-            status_code=200,
-            headers={"Access-Control-Allow-Origin": "*"}
+            status_code=200
         )
     except Exception as e:
         logging.error(f"Error: {str(e)}")
         return func.HttpResponse(
             json.dumps({"error": str(e)}),
-            status_code=500,
-            headers={"Access-Control-Allow-Origin": "*"}
+            status_code=500
         )
