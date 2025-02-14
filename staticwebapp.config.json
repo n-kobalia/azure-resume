@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "route": "/api",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "redirect": "https://nk-azureresume-function-app.azurewebsites.net/api/GetResumeCounter?"
+    }
+  ]
+}
