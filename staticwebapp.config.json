@@ -6,6 +6,7 @@
         "get",
         "post"
       ],
+      "rewrite": "/api",
       "redirect": "https://nk-azureresume-function-app.azurewebsites.net/api/GetResumeCounter?"
     }
   ]
