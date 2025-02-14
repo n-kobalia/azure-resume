@@ -40,7 +40,7 @@ def GetResumeCounter(req: func.HttpRequest) -> func.HttpResponse:
             mimetype="application/json",
             status_code=200,
             headers={
-                "Access-Control-Allow-Origin": "https://lemon-wave-06bcc1910.4.azurestaticapps.net",
+                "Access-Control-Allow-Origin": "https://wwww.nkobalia.site",
                 "Access-Control-Allow-Methods": "GET"
                 }
         )
@@ -50,7 +50,7 @@ def GetResumeCounter(req: func.HttpRequest) -> func.HttpResponse:
             json.dumps({"error": str(e)}),
             status_code=500,
             headers={
-                "Access-Control-Allow-Origin": "https://lemon-wave-06bcc1910.4.azurestaticapps.net",
+                "Access-Control-Allow-Origin": "wwww.httmps://nkobalia.site",
                 "Access-Control-Allow-Methods": "GET"
                 }
         )
