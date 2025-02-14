@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     getVisitCount();
 });
 
-const functionApiURL = "/api/GetResumeCounter";
+const functionApiURL = "/api";
 const getVisitCount = () => {
     fetch(functionApiURL, {
     })
