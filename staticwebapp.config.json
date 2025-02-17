@@ -5,8 +5,10 @@
       "methods": [
         "get"
       ],
-      "rewrite": "https://google.com/",
-      "redirect": "https://google.com/",
+      "rewrite": "/api*",
+      "backend": {
+        "url": "https:google.com"
+      },
       "allowedRoles": [
         "anonymous"
       ]
