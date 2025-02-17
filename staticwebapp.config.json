@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/api/*",
+      "methods": [
+        "get"
+      ],
+      "rewrite": "https://google.com/",
+      "allowedRoles": [
+        "anonymous"
+      ]
+    }
+  ]
+}
