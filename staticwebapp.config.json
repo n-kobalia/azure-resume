@@ -6,6 +6,7 @@
         "get"
       ],
       "rewrite": "https://google.com/",
+      "redirect": "https://google.com/",
       "allowedRoles": [
         "anonymous"
       ]
