@@ -1,17 +1,1 @@
-{
-  "routes": [
-    {
-      "route": "/api/*",
-      "methods": [
-        "get"
-      ],
-      "rewrite": "/api*",
-      "backend": {
-        "url": "https:google.com"
-      },
-      "allowedRoles": [
-        "anonymous"
-      ]
-    }
-  ]
-}
+{}
