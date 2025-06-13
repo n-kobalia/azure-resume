@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     getVisitCount();
 });
 
-const functionApiURL = "API"
+const functionApiURL = "https://nk-azureresume-function-app.azurewebsites.net/api/GetResumeCounter?"
 const getVisitCount = () => {
     fetch(functionApiURL, {
     })
