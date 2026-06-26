@@ -32,7 +32,7 @@ Visitor Counter: Tracks and displays the number of visitors
 
 ## Project Live
 
-You can check out the live version of my resume here: [Live](https://www.nkobalia.site/)
+You can check out the live version of my resume here: [Live]([https://www.nkobalia.site/](https://green-forest-0adc7f50f.4.azurestaticapps.net/))
 
 ## Credits
 
